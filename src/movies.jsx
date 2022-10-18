@@ -32,7 +32,8 @@ export default class Movies extends Component {
 const  {movies:allMovies,itemCount,pageSize,currentPage}=this.state;
        const movies=Paginate(allMovies,currentPage,pageSize)
 
-
+//note we cant access the movies property directly by using movies.length
+// we have to use following method only
   const {length}=this.state.movies
 
   if(length===0) return(
